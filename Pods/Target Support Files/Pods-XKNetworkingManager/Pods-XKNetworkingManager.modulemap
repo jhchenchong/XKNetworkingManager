@@ -1,0 +1,6 @@
+framework module Pods_XKNetworkingManager {
+  umbrella header "Pods-XKNetworkingManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
