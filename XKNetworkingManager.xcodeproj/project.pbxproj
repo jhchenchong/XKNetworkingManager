@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7B723921F7CA5540044339F /* XKCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B7238E1F7CA5540044339F /* XKCache.m */; };
+		B7B723931F7CA5540044339F /* XKUploadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B7238F1F7CA5540044339F /* XKUploadModel.m */; };
+		B7B723941F7CA5540044339F /* XKNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B723911F7CA5540044339F /* XKNetworkingManager.m */; };
 		B7F187B21F7CA169003D24FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F187B11F7CA169003D24FC /* main.m */; };
 		B7F187B51F7CA169003D24FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F187B41F7CA169003D24FC /* AppDelegate.m */; };
 		B7F187B81F7CA169003D24FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F187B71F7CA169003D24FC /* ViewController.m */; };
 		B7F187BB1F7CA169003D24FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F187B91F7CA169003D24FC /* Main.storyboard */; };
 		B7F187BD1F7CA169003D24FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7F187BC1F7CA169003D24FC /* Assets.xcassets */; };
 		B7F187C01F7CA169003D24FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F187BE1F7CA169003D24FC /* LaunchScreen.storyboard */; };
-		B7F187CF1F7CA1EC003D24FC /* XKCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F187CA1F7CA1EC003D24FC /* XKCache.m */; };
-		B7F187D01F7CA1EC003D24FC /* XKUploadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F187CC1F7CA1EC003D24FC /* XKUploadModel.m */; };
-		B7F187D11F7CA1EC003D24FC /* XKNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F187CE1F7CA1EC003D24FC /* XKNetworkingManager.m */; };
 		E29354322C4F7974AA4F0002 /* Pods_XKNetworkingManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F420738CB81FFC0F891FE19 /* Pods_XKNetworkingManager.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +23,13 @@
 		306ADF097262FD053CF1522E /* Pods-XKNetworkingManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XKNetworkingManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-XKNetworkingManager/Pods-XKNetworkingManager.release.xcconfig"; sourceTree = "<group>"; };
 		4F420738CB81FFC0F891FE19 /* Pods_XKNetworkingManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XKNetworkingManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A22F3EF01BE0C7B192FB5F0C /* Pods-XKNetworkingManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XKNetworkingManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XKNetworkingManager/Pods-XKNetworkingManager.debug.xcconfig"; sourceTree = "<group>"; };
+		B7B7238B1F7CA5540044339F /* XKNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKNetworking.h; sourceTree = "<group>"; };
+		B7B7238C1F7CA5540044339F /* XKUploadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKUploadModel.h; sourceTree = "<group>"; };
+		B7B7238D1F7CA5540044339F /* XKNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKNetworkingManager.h; sourceTree = "<group>"; };
+		B7B7238E1F7CA5540044339F /* XKCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKCache.m; sourceTree = "<group>"; };
+		B7B7238F1F7CA5540044339F /* XKUploadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKUploadModel.m; sourceTree = "<group>"; };
+		B7B723901F7CA5540044339F /* XKCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKCache.h; sourceTree = "<group>"; };
+		B7B723911F7CA5540044339F /* XKNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKNetworkingManager.m; sourceTree = "<group>"; };
 		B7F187AD1F7CA169003D24FC /* XKNetworkingManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XKNetworkingManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F187B11F7CA169003D24FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B7F187B31F7CA169003D24FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,13 +40,6 @@
 		B7F187BC1F7CA169003D24FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7F187BF1F7CA169003D24FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7F187C11F7CA169003D24FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7F187C81F7CA1EC003D24FC /* XKNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKNetworkingManager.h; sourceTree = "<group>"; };
-		B7F187C91F7CA1EC003D24FC /* XKNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKNetworking.h; sourceTree = "<group>"; };
-		B7F187CA1F7CA1EC003D24FC /* XKCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKCache.m; sourceTree = "<group>"; };
-		B7F187CB1F7CA1EC003D24FC /* XKCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKCache.h; sourceTree = "<group>"; };
-		B7F187CC1F7CA1EC003D24FC /* XKUploadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKUploadModel.m; sourceTree = "<group>"; };
-		B7F187CD1F7CA1EC003D24FC /* XKUploadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKUploadModel.h; sourceTree = "<group>"; };
-		B7F187CE1F7CA1EC003D24FC /* XKNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKNetworkingManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +71,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B7B7238A1F7CA5540044339F /* XKNetworkingManager */ = {
+			isa = PBXGroup;
+			children = (
+				B7B7238B1F7CA5540044339F /* XKNetworking.h */,
+				B7B7238C1F7CA5540044339F /* XKUploadModel.h */,
+				B7B7238D1F7CA5540044339F /* XKNetworkingManager.h */,
+				B7B7238E1F7CA5540044339F /* XKCache.m */,
+				B7B7238F1F7CA5540044339F /* XKUploadModel.m */,
+				B7B723901F7CA5540044339F /* XKCache.h */,
+				B7B723911F7CA5540044339F /* XKNetworkingManager.m */,
+			);
+			path = XKNetworkingManager;
+			sourceTree = "<group>";
+		};
 		B7F187A41F7CA169003D24FC = {
 			isa = PBXGroup;
 			children = (
@@ -92,7 +106,7 @@
 		B7F187AF1F7CA169003D24FC /* XKNetworkingManager */ = {
 			isa = PBXGroup;
 			children = (
-				B7F187C71F7CA1A8003D24FC /* XKNetworkingManager */,
+				B7B7238A1F7CA5540044339F /* XKNetworkingManager */,
 				B7F187B31F7CA169003D24FC /* AppDelegate.h */,
 				B7F187B41F7CA169003D24FC /* AppDelegate.m */,
 				B7F187B61F7CA169003D24FC /* ViewController.h */,
@@ -112,20 +126,6 @@
 				B7F187B11F7CA169003D24FC /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B7F187C71F7CA1A8003D24FC /* XKNetworkingManager */ = {
-			isa = PBXGroup;
-			children = (
-				B7F187C91F7CA1EC003D24FC /* XKNetworking.h */,
-				B7F187C81F7CA1EC003D24FC /* XKNetworkingManager.h */,
-				B7F187CE1F7CA1EC003D24FC /* XKNetworkingManager.m */,
-				B7F187CB1F7CA1EC003D24FC /* XKCache.h */,
-				B7F187CA1F7CA1EC003D24FC /* XKCache.m */,
-				B7F187CD1F7CA1EC003D24FC /* XKUploadModel.h */,
-				B7F187CC1F7CA1EC003D24FC /* XKUploadModel.m */,
-			);
-			name = XKNetworkingManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,9 +263,9 @@
 				B7F187B81F7CA169003D24FC /* ViewController.m in Sources */,
 				B7F187B51F7CA169003D24FC /* AppDelegate.m in Sources */,
 				B7F187B21F7CA169003D24FC /* main.m in Sources */,
-				B7F187CF1F7CA1EC003D24FC /* XKCache.m in Sources */,
-				B7F187D11F7CA1EC003D24FC /* XKNetworkingManager.m in Sources */,
-				B7F187D01F7CA1EC003D24FC /* XKUploadModel.m in Sources */,
+				B7B723921F7CA5540044339F /* XKCache.m in Sources */,
+				B7B723941F7CA5540044339F /* XKNetworkingManager.m in Sources */,
+				B7B723931F7CA5540044339F /* XKUploadModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
