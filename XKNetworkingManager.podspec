@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name = 'XKNetworkingManager'
-s.version = '1.0.1'
+s.version = '2.0.0'
 s.license = 'MIT'
 s.summary = '基于RAC AFNetworking YYCache封装的自带缓存的网络请求'
 s.homepage = 'https://github.com/jhchenchong/XKNetworkingManager.git'
