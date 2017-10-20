@@ -37,6 +37,13 @@ static AFHTTPSessionManager *_sessionManager;
         
         NSURLSessionDataTask *task = [_sessionManager GET:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
+#if DEBUG
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                NSLog(@"请求(%@)---%@", url, [self jsonStringWithObject:responseObject]);
+            });
+#endif
+            
             [subscriber sendNext:responseObject];
             
             [subscriber sendCompleted];
@@ -45,6 +52,10 @@ static AFHTTPSessionManager *_sessionManager;
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
            
+#if DEBUG
+            NSLog(@"请求(%@)%@", url, error);
+#endif
+            
             [subscriber sendError:error];
             
         }];
@@ -66,6 +77,13 @@ static AFHTTPSessionManager *_sessionManager;
         
         NSURLSessionDataTask *task = [_sessionManager POST:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
+#if DEBUG
+            dispatch_async(dispatch_get_main_queue(), ^{
+               
+                NSLog(@"请求(%@)---%@", url, [self jsonStringWithObject:responseObject]);
+            });
+#endif
+            
             [subscriber sendNext:responseObject];
             
             [subscriber sendCompleted];
@@ -73,6 +91,10 @@ static AFHTTPSessionManager *_sessionManager;
             isCache ? [[XKCache sharedInstance] setHttpCache:responseObject URL:url parameters:parameters] : nil;
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            
+#if DEBUG
+            NSLog(@"请求(%@)%@", url, error);
+#endif
             
             [subscriber sendError:error];
             
@@ -108,6 +130,10 @@ static AFHTTPSessionManager *_sessionManager;
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
            
+#if DEBUG
+            NSLog(@"请求(%@)%@", url, error);
+#endif
+            
             [subscriber sendError:error];
         }];
         
@@ -119,6 +145,29 @@ static AFHTTPSessionManager *_sessionManager;
     }];
     
     return signal;
+}
+
+#pragma mark -- 私有方法 在DEBUG模式下将请求结果转换成json字符串打印出来 方便后续创建模型
+
++ (NSString *)jsonStringWithObject:(id)jsonObject {
+    
+    NSError *error = nil;
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonObject
+                                                       options:NSJSONWritingPrettyPrinted
+                                                         error:&error];
+    
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData
+                                                 encoding:NSUTF8StringEncoding];
+    
+    if ([jsonString length] > 0 && error == nil) {
+        
+        return jsonString;
+        
+    } else {
+        
+        return nil;
+    }
 }
 
 @end
