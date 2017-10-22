@@ -21,6 +21,6 @@ typedef void(^XKHttpRequestCache)(id responseCache);
 
 + (RACSignal *)POST:(NSString *)url parameters:(id)parameters isCache:(BOOL)isCache;
 
-+ (RACSignal *)uploadWithURL:(NSString *)url parameters:(NSMutableDictionary *)parameters files:(NSMutableArray <XKUploadModel *>*)files;
++ (RACSignal *)uploadWithURL:(NSString *)url parameters:(id)parameters files:(NSMutableArray <XKUploadModel *>*)files;
 
 @end

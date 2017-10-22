@@ -40,7 +40,7 @@ static AFHTTPSessionManager *_sessionManager;
 #if DEBUG
             dispatch_async(dispatch_get_main_queue(), ^{
                 
-                NSLog(@"请求(%@)---%@", url, [self jsonStringWithObject:responseObject]);
+                NSLog(@"请求(地址:%@参数:%@)---%@", url, parameters,  [self jsonStringWithObject:responseObject]);
             });
 #endif
             
@@ -53,7 +53,7 @@ static AFHTTPSessionManager *_sessionManager;
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
            
 #if DEBUG
-            NSLog(@"请求(%@)%@", url, error);
+            NSLog(@"请求(地址:%@参数:%@)%@", url, parameters, error);
 #endif
             
             [subscriber sendError:error];
@@ -80,7 +80,7 @@ static AFHTTPSessionManager *_sessionManager;
 #if DEBUG
             dispatch_async(dispatch_get_main_queue(), ^{
                
-                NSLog(@"请求(%@)---%@", url, [self jsonStringWithObject:responseObject]);
+                NSLog(@"请求(地址:%@参数:%@)---%@", url, parameters,  [self jsonStringWithObject:responseObject]);
             });
 #endif
             
@@ -93,7 +93,7 @@ static AFHTTPSessionManager *_sessionManager;
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             
 #if DEBUG
-            NSLog(@"请求(%@)%@", url, error);
+            NSLog(@"请求(地址:%@参数:%@)%@", url, parameters, error);
 #endif
             
             [subscriber sendError:error];
@@ -109,7 +109,7 @@ static AFHTTPSessionManager *_sessionManager;
     return signal;
 }
 
-+ (RACSignal *)uploadWithURL:(NSString *)url parameters:(NSMutableDictionary *)parameters files:(NSMutableArray <XKUploadModel *>*)files {
++ (RACSignal *)uploadWithURL:(NSString *)url parameters:(id)parameters files:(NSMutableArray <XKUploadModel *>*)files {
     
     RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
        
@@ -131,7 +131,7 @@ static AFHTTPSessionManager *_sessionManager;
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
            
 #if DEBUG
-            NSLog(@"请求(%@)%@", url, error);
+            NSLog(@"请求(地址:%@参数:%@)%@", url, parameters, error);
 #endif
             
             [subscriber sendError:error];
